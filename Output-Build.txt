@@ -1,0 +1,4 @@
+﻿Build started...
+1>------ Build started: Project: JobSeeker, Configuration: Debug Any CPU ------
+1>  JobSeeker -> C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\JobSeeker.dll
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========

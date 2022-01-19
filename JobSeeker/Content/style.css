@@ -22,7 +22,7 @@ body {
     margin:0;
 }
 
-.navbar-expand-lg .navbar-collapse li{
+.navbar-expand-lg .navbar-collapse li {
     padding-left: 25px;
 }
 
@@ -41,7 +41,7 @@ body {
     background-color: lightsteelblue;
     padding-top: 30px;
     font-family: myfont;
-    text-align:justify;
+    text-align: justify;
 }
 
 .myFooter h3{
