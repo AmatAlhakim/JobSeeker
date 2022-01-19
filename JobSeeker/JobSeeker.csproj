@@ -203,9 +203,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Models\AccountViewModels.cs" />
-    <Compile Include="Views\Models\IdentityModels.cs" />
-    <Compile Include="Views\Models\ManageViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
