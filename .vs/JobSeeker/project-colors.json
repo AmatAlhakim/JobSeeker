@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "70321bbf-ea2b-4974-85a5-0067f101a8da": {
+      "ProjectGuid": "70321bbf-ea2b-4974-85a5-0067f101a8da",
+      "DisplayName": "JobSeeker.Resources",
+      "ColorIndex": 0
+    },
+    "a9235663-f0ac-4a8b-a046-908689a895a7": {
+      "ProjectGuid": "a9235663-f0ac-4a8b-a046-908689a895a7",
+      "DisplayName": "JobSeeker",
+      "ColorIndex": 1
+    },
+    "a7ea63fd-fac9-4efb-8ac5-a9a3fb742f96": {
+      "ProjectGuid": "a7ea63fd-fac9-4efb-8ac5-a9a3fb742f96",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 2
+    },
+    "fbfe7c9c-7723-41ca-aad0-6815b3eb5e3c": {
+      "ProjectGuid": "fbfe7c9c-7723-41ca-aad0-6815b3eb5e3c",
+      "DisplayName": "JobSeeker.Resources",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
