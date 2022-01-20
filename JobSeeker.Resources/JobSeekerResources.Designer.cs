@@ -59,5 +59,221 @@ namespace JobSeeker.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string ContactUs {
+            get {
+                return ResourceManager.GetString("ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Account.
+        /// </summary>
+        public static string CreateAccount {
+            get {
+                return ResourceManager.GetString("CreateAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow Us On Facebook.
+        /// </summary>
+        public static string FollowFacebook {
+            get {
+                return ResourceManager.GetString("FollowFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow Us On Instagram.
+        /// </summary>
+        public static string FollowInstagram {
+            get {
+                return ResourceManager.GetString("FollowInstagram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow Us On Twitter.
+        /// </summary>
+        public static string FollowTwitter {
+            get {
+                return ResourceManager.GetString("FollowTwitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow Us On YouTube.
+        /// </summary>
+        public static string FollowYouTube {
+            get {
+                return ResourceManager.GetString("FollowYouTube", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Rights Are Reserved.
+        /// </summary>
+        public static string Footer {
+            get {
+                return ResourceManager.GetString("Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jobs In Global Sector.
+        /// </summary>
+        public static string GlobalJobs {
+            get {
+                return ResourceManager.GetString("GlobalJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Important Links.
+        /// </summary>
+        public static string ImportantLinks {
+            get {
+                return ResourceManager.GetString("ImportantLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jobs In Local Sector.
+        /// </summary>
+        public static string LocalJobs {
+            get {
+                return ResourceManager.GetString("LocalJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JobSeeker.
+        /// </summary>
+        public static string MainHeader {
+            get {
+                return ResourceManager.GetString("MainHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Offerd Category.
+        /// </summary>
+        public static string OffersCategory {
+            get {
+                return ResourceManager.GetString("OffersCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jobs In Private Sector.
+        /// </summary>
+        public static string PrivateJobs {
+            get {
+                return ResourceManager.GetString("PrivateJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jobs In Public Sector.
+        /// </summary>
+        public static string PublicJobs {
+            get {
+                return ResourceManager.GetString("PublicJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register as new user.
+        /// </summary>
+        public static string RegisterAsNewUser {
+            get {
+                return ResourceManager.GetString("RegisterAsNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remeber Me.
+        /// </summary>
+        public static string RemeberMe {
+            get {
+                return ResourceManager.GetString("RemeberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Who We Are.
+        /// </summary>
+        public static string WhoWeAre {
+            get {
+                return ResourceManager.GetString("WhoWeAre", resourceCulture);
+            }
+        }
     }
 }
