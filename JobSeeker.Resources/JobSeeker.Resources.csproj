@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JobSeekerResources.ar-SY.Designer.cs">
+    <Compile Include="JobSeekerResources.ar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JobSeekerResources.ar-SY.resx</DependentUpon>
+      <DependentUpon>JobSeekerResources.ar.resx</DependentUpon>
     </Compile>
     <Compile Include="JobSeekerResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="JobSeekerResources.ar-SY.resx">
+    <EmbeddedResource Include="JobSeekerResources.ar.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>JobSeekerResources.ar-SY.Designer.cs</LastGenOutput>
+      <LastGenOutput>JobSeekerResources.ar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="JobSeekerResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -120,7 +120,7 @@
   <data name="AboutUs" xml:space="preserve">
     <value>معلومات عنا</value>
   </data>
-  <data name="ConfirmEmail" xml:space="preserve">
+  <data name="ConfirmPassword" xml:space="preserve">
     <value>تأكيد البريد الإلكتروني</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
@@ -150,6 +150,9 @@
   <data name="GlobalJobs" xml:space="preserve">
     <value>وظائف خارج الدولة</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>مرحباً يا</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الصفحة الرئيسية</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>تسجيل الخروج</value>
   </data>
   <data name="MainHeader" xml:space="preserve">
     <value>منقبوا الوظائف</value>

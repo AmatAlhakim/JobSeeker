@@ -21,8 +21,9 @@ namespace JobSeeker
         }
         protected void ApplicationAquirRequestState(object sender, EventArgs e)
         {
-            string culture = "ar-sy";
+            string culture = "ar";
             Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
         }
     }
 }
