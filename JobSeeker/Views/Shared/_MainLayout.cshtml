@@ -17,6 +17,12 @@
             <div class="container text-md-center">
                 <h1>JobSeeker</h1>
             </div>
+            <div>
+                <ul class="navbar-nav navbar-right" style="display: flex; flex-direction: row; list-style: none; text-decoration: none; padding: 10px;">
+                    <li class="nav-item"><span style="color: antiquewhite; text-decoration: none;">@Html.ActionLink("ar", "Change", "LanguageManager")</span></li>
+                    <li class="nav-item"><a href="#" style="color: antiquewhite; text-decoration: none;">| English</a></li>
+                </ul>
+            </div>
         </div>
         <!--Navbar-->
         <nav class="navbar navbar navbar-expand-lg navbar-light bg-light" id="subHeader">
@@ -79,6 +85,7 @@
             </div>
         </nav>
 
+        <!--Body Section-->
         <div class="container body-content">
             @RenderBody()
             <br />

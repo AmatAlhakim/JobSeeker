@@ -22,6 +22,19 @@ body {
     margin:0;
 }
 
+#language ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.language .nav-item li a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
 .navbar-expand-lg .navbar-collapse li {
     padding-left: 25px;
 }

@@ -18,7 +18,6 @@ namespace JobSeeker.Controllers
 
         
         // Add a method
-        [HttpPost]
         public ActionResult Change(string lang)
         {
             if (lang != null)
@@ -30,8 +29,7 @@ namespace JobSeeker.Controllers
             HttpCookie cookie = new HttpCookie("Language");
             cookie.Value = lang;
             Response.Cookies.Add(cookie);
-
-            return View("Index");
+            return View();
         }
     }
 }                                                                                       

@@ -21,9 +21,14 @@ namespace JobSeeker
         }
         protected void ApplicationAquirRequestState(object sender, EventArgs e)
         {
-            string culture = "ar";
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+           /* string culture = "ar";*/
+            HttpCookie culture = HttpContext.Current.Request.Cookies["Language"];
+            if (culture != null && culture.Value != null)
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture.Value);
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture.Value);
+            }
+            
         }
     }
 }
