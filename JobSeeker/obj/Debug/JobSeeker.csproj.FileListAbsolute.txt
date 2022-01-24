@@ -181,3 +181,7 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.Secu
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Newtonsoft.Json.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\System.Web.Optimization.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\ar\JobSeeker.Resources.resources.dll
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.InitialCreate.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddUserTypeColumn.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddCategoryTable.resources
