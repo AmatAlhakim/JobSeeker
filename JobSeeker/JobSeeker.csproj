@@ -194,6 +194,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\LanguageManagerController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -211,10 +212,19 @@
     <Compile Include="Migrations\202201241250500_AddCategoryTable.designer.cs">
       <DependentUpon>202201241250500_AddCategoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201250918453_ChangeCategoryColumnsNames.cs" />
+    <Compile Include="Migrations\202201250918453_ChangeCategoryColumnsNames.designer.cs">
+      <DependentUpon>202201250918453_ChangeCategoryColumnsNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201250932196_AddJobTable.cs" />
+    <Compile Include="Migrations\202201250932196_AddJobTable.designer.cs">
+      <DependentUpon>202201250932196_AddJobTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Job.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -395,6 +405,11 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Jobs\Create.cshtml" />
+    <Content Include="Views\Jobs\Delete.cshtml" />
+    <Content Include="Views\Jobs\Details.cshtml" />
+    <Content Include="Views\Jobs\Edit.cshtml" />
+    <Content Include="Views\Jobs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -420,6 +435,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201241250500_AddCategoryTable.resx">
       <DependentUpon>202201241250500_AddCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201250918453_ChangeCategoryColumnsNames.resx">
+      <DependentUpon>202201250918453_ChangeCategoryColumnsNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201250932196_AddJobTable.resx">
+      <DependentUpon>202201250932196_AddJobTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

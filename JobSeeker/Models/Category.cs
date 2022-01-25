@@ -11,9 +11,10 @@ namespace JobSeeker.Models
         public int id { get; set; }
         [Required]
         [Display(Name ="Job Category")]
-        public string category { get; set; }
+        public string CategoryName { get; set; }
         [Required]
         [Display(Name ="Category Description")]
-        public string description { get; set; }
+        public string Description { get; set; }
+        public ICollection<Job> Jobs { get; set; }
     }
 }

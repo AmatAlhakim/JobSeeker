@@ -47,7 +47,7 @@ namespace JobSeeker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,category,description")] Category category)
+        public ActionResult Create([Bind(Include = "CategoryName,Description")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace JobSeeker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,category,description")] Category category)
+        public ActionResult Edit([Bind(Include = "id,CategoryName,Description")] Category category)
         {
             if (ModelState.IsValid)
             {

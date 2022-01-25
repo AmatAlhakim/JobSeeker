@@ -33,5 +33,7 @@ namespace JobSeeker
         }
 
         public System.Data.Entity.DbSet<JobSeeker.Models.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<JobSeeker.Models.Job> Jobs { get; set; }
     }
 }
