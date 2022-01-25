@@ -20,6 +20,7 @@ namespace JobSeeker.Models
         [Required]
         [DisplayName("Job Category")]
         public int CategoryId { get; set; }
+        public Category Category { get; set; }
        
     }
 }

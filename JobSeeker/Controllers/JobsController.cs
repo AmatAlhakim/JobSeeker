@@ -18,7 +18,8 @@ namespace JobSeeker.Controllers
         // GET: Jobs
         public ActionResult Index()
         {
-            return View(db.Jobs.ToList());
+            var jobs = db.Jobs.Include(j => j.Category);
+            return View(jobs.ToList());
         }
 
         // GET: Jobs/Details/5
@@ -39,6 +40,7 @@ namespace JobSeeker.Controllers
         // GET: Jobs/Create
         public ActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(db.Categories, "id", "CategoryName");
             return View();
         }
 
@@ -56,6 +58,7 @@ namespace JobSeeker.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CategoryId = new SelectList(db.Categories, "id", "CategoryName", job.CategoryId);
             return View(job);
         }
 
@@ -71,6 +74,7 @@ namespace JobSeeker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CategoryId = new SelectList(db.Categories, "id", "CategoryName", job.CategoryId);
             return View(job);
         }
 
@@ -87,6 +91,7 @@ namespace JobSeeker.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CategoryId = new SelectList(db.Categories, "id", "CategoryName", job.CategoryId);
             return View(job);
         }
 

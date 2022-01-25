@@ -220,6 +220,10 @@
     <Compile Include="Migrations\202201250932196_AddJobTable.designer.cs">
       <DependentUpon>202201250932196_AddJobTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201251025403_UpdateJobTable.cs" />
+    <Compile Include="Migrations\202201251025403_UpdateJobTable.designer.cs">
+      <DependentUpon>202201251025403_UpdateJobTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -441,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201250932196_AddJobTable.resx">
       <DependentUpon>202201250932196_AddJobTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201251025403_UpdateJobTable.resx">
+      <DependentUpon>202201251025403_UpdateJobTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
