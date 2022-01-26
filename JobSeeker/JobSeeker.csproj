@@ -224,6 +224,14 @@
     <Compile Include="Migrations\202201251025403_UpdateJobTable.designer.cs">
       <DependentUpon>202201251025403_UpdateJobTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201260831003_AddLazyLoading.cs" />
+    <Compile Include="Migrations\202201260831003_AddLazyLoading.designer.cs">
+      <DependentUpon>202201260831003_AddLazyLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201260831410_AddLazyLoading1.cs" />
+    <Compile Include="Migrations\202201260831410_AddLazyLoading1.designer.cs">
+      <DependentUpon>202201260831410_AddLazyLoading1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -423,6 +431,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JobSeeker.Resources\JobSeeker.Resources.csproj">
@@ -448,6 +457,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201251025403_UpdateJobTable.resx">
       <DependentUpon>202201251025403_UpdateJobTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201260831003_AddLazyLoading.resx">
+      <DependentUpon>202201260831003_AddLazyLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201260831410_AddLazyLoading1.resx">
+      <DependentUpon>202201260831410_AddLazyLoading1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

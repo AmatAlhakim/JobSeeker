@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using JobSeeker;
 using JobSeeker.Models;
+using System.IO;
 
 namespace JobSeeker.Controllers
 {
@@ -49,10 +50,15 @@ namespace JobSeeker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,JobTitle,JobDescription,JobImage,JobStatus,CategoryId")] Job job)
+        public ActionResult Create(Job job, HttpPostedFileBase upload)
         {
             if (ModelState.IsValid)
             {
+                //Save image in the server
+                string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                upload.SaveAs(path);
+                //Add image path to the db
+                job.JobImage = upload.FileName;
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -83,10 +89,16 @@ namespace JobSeeker.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,JobTitle,JobDescription,JobImage,JobStatus,CategoryId")] Job job)
+        public ActionResult Edit(Job job, HttpPostedFileBase upload)
         {
             if (ModelState.IsValid)
             {
+                if (upload != null && upload.ContentLength > 0)
+                {
+                    string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                    upload.SaveAs(path);
+                    job.JobImage = upload.FileName;
+                }
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

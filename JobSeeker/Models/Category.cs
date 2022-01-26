@@ -15,6 +15,6 @@ namespace JobSeeker.Models
         [Required]
         [Display(Name ="Category Description")]
         public string Description { get; set; }
-        public ICollection<Job> Jobs { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
     }
 }

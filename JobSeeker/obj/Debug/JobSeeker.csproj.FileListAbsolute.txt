@@ -188,3 +188,5 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Mig
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.ChangeCategoryColumnsNames.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddJobTable.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateJobTable.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddLazyLoading.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddLazyLoading1.resources
