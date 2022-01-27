@@ -93,12 +93,14 @@ namespace JobSeeker.Controllers
         {
             if (ModelState.IsValid)
             {
+                string oldPath = Path.Combine(Server.MapPath("~/Uploads"), job.JobImage);
                 if (upload != null && upload.ContentLength > 0)
                 {
+                    System.IO.File.Delete(oldPath);
                     string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
                     upload.SaveAs(path);
                     job.JobImage = upload.FileName;
-                }
+                }                
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
