@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobSeeker;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext context = new ApplicationDbContext();
+
         public ActionResult Index()
         {
-            return View();
+            return View(context.Categories.ToList());
         }
 
         public ActionResult About()

@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 namespace JobSeeker.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class RolesController : Controller
     {
         ApplicationDbContext context = new ApplicationDbContext();
