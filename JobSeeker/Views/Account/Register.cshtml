@@ -1,5 +1,5 @@
 ﻿@model JobSeeker.Models.RegisterViewModel
-@using System.Collections.Generic
+
 @{
     ViewBag.Title = "Register";
 }
@@ -24,13 +24,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.UserType, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @{ 
-                List<string> types = new List<string>();
-                types.Clear();
-                types.Add("Publisher");
-                types.Add("Seeker");
-            }
-            @Html.DropDownListFor(m => m.UserType, new SelectList(types,"Text"), new { @class = "form-control" })
+            @Html.DropDownList("UserType", null, new { @class = "btn btn-secondary form-control dropdown-toggle dropdown-toggle-split" })
         </div>
     </div>
 

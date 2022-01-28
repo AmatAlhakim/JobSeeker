@@ -32,8 +32,8 @@ namespace JobSeeker
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<JobSeeker.Models.Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public System.Data.Entity.DbSet<JobSeeker.Models.Job> Jobs { get; set; }
+        public DbSet<Job> Jobs { get; set; }
     }
 }
