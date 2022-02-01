@@ -18,3 +18,14 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\Job
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\ar\JobSeeker.Resources.resources.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.pdb
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\bin\Debug\JobSeeker.Resources.dll
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\bin\Debug\JobSeeker.Resources.pdb
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\bin\Debug\ar\JobSeeker.Resources.resources.dll
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.csproj.AssemblyReference.cache
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.JobSeekerResources.resources
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.JobSeekerResources.ar.resources
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.csproj.GenerateResource.cache
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.csproj.CoreCompileInputs.cache
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\ar\JobSeeker.Resources.resources.dll
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.dll
+C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.pdb
