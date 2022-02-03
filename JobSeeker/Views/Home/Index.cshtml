@@ -4,6 +4,9 @@
     ViewBag.Title = "Home Page";
 }
 
+@Html.BeginForm("Details", "Home", FormMethod.Post, new { enctype = "multipart/form-data"}){
+@Html.AntiForgeryToken()
+
 <div class="jumbotron">
     <h1>Hello Dear Visitor</h1>
     <h5>You can find and publish different types of jobs and look for the best matches job for you all in one place called <span style="color: darkblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-size: x-large; padding-left: 3px; padding-right: 3px;">JobSeeker</span></h5>
@@ -23,9 +26,10 @@
                     <img src="~/Uploads/@innerItem.JobImage" alt="Job Image" style="width:120px; height:130px;" />
                     <h3>@innerItem.JobTitle</h3>
                     <h5>@innerItem.JobDescription</h5>
-                    <button class="btn btn-secondary">Details</button>
+                    <button class="btn btn-link">@Html.ActionLink("More Detail", "Details", new {id=innerItem.Id})</button>
                 </div>
             }
         </div>
     </div>
+}
 }
