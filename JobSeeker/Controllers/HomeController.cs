@@ -23,6 +23,14 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public ActionResult Details(int id)
+        {
+            var job = context.Jobs.Find(id);
+            if (job == null)
+                return HttpNotFound();
+            return View(job);
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

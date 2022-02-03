@@ -29,4 +29,3 @@ C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug
 C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\ar\JobSeeker.Resources.resources.dll
 C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.dll
 C:\Users\Admin Acc\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.pdb
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\obj\Debug\JobSeeker.Resources.csproj.AssemblyReference.cache
