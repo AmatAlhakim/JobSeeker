@@ -1,0 +1,54 @@
+﻿@model IEnumerable<JobSeeker.Models.ApplyForJob>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "GetJobsByUserId";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div style="margin-top:10px;">
+    <h2>All Applied Jobs</h2>
+    <hr />
+</div>
+
+<div style="margin:20px;">
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Job.JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th></th>
+        </tr>
+        @{
+            ApplicationDbContext context = new ApplicationDbContext();
+            var id = User.Identity.GetUserId();
+            var Model = context.ApplyForJobs.Where(p => p.UserId == id).ToList();
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job.JobTitle)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.ApplicationDate)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </th>
+                <td>
+                    @Html.ActionLink("Cancel Application", "CancelApplication", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+

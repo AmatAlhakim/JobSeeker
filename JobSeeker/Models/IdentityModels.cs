@@ -35,5 +35,8 @@ namespace JobSeeker
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Job> Jobs { get; set; }
+
+        public DbSet<ApplyForJob> ApplyForJobs { get; set; }
+
     }
 }

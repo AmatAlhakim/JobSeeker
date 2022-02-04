@@ -4,32 +4,31 @@
     ViewBag.Title = "Home Page";
 }
 
-@Html.BeginForm("Details", "Home", FormMethod.Post, new { enctype = "multipart/form-data"}){
+
 @Html.AntiForgeryToken()
 
 <div class="jumbotron">
     <h1>Hello Dear Visitor</h1>
-    <h5>You can find and publish different types of jobs and look for the best matches job for you all in one place called <span style="color: darkblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-size: x-large; padding-left: 3px; padding-right: 3px;">JobSeeker</span></h5>
+    <h5>You can find and publish different types of jobs and look for the best matches job for you all in one place called <span id="title">JobSeeker</span></h5>
     <p><a href="#" class="btn btn-primary btn-lg">More Details &raquo;</a></p>
 </div>
 
 @foreach (var item in Model)
 {
-    <div class="panel panel-default">
-        <h2 class="panel-heading">@Html.DisplayFor(model => item.CategoryName)</h2>
-        <h4 class="panel-heading">@Html.DisplayFor(model => item.Description)</h4>
+    <div class="panel panel-default" style="padding:20px;">
+        <h1 class="panel-heading">@Html.DisplayFor(model => item.CategoryName)</h1>
+        <h5 class="panel-heading">@Html.DisplayFor(model => item.Description)</h5>
 
         <div class="row">
             @foreach (var innerItem in item.Jobs)
             {
-                <div class="col-md-3 thumbnail">
-                    <img src="~/Uploads/@innerItem.JobImage" alt="Job Image" style="width:120px; height:130px;" />
-                    <h3>@innerItem.JobTitle</h3>
-                    <h5>@innerItem.JobDescription</h5>
-                    <button class="btn btn-link">@Html.ActionLink("More Detail", "Details", new {id=innerItem.Id})</button>
-                </div>
+            <div class="col-md-3 thumbnail" style="margin-left:20px; margin-bottom: 30px; height:380px;">
+                <img src="~/Uploads/@innerItem.JobImage" alt="Job Image" style="width:120px; height:130px;padding-bottom:10px;" />
+                <h3 style="padding-bottom:5px;">@innerItem.JobTitle</h3>
+                <h6 style="padding-bottom:5px;">@innerItem.JobDescription</h6>
+                @Html.ActionLink("More Detail", "Details", new { id = innerItem.Id }, new { @class = "btn btn-secondary" })
+            </div>
             }
         </div>
     </div>
-}
 }

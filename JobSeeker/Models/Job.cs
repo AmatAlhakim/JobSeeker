@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Collections.Generic;
 
 namespace JobSeeker.Models
 {
@@ -20,6 +19,8 @@ namespace JobSeeker.Models
         [Required]
         [DisplayName("Job Category")]
         public int CategoryId { get; set; }
+        [DisplayName("Publisher Name")]
+        public string PublisherId { get; set; }
         public virtual Category Category { get; set; }
        
     }

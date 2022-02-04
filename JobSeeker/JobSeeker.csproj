@@ -233,8 +233,33 @@
     <Compile Include="Migrations\202201260831410_AddLazyLoading1.designer.cs">
       <DependentUpon>202201260831410_AddLazyLoading1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202041034238_AddApplicationTable.cs" />
+    <Compile Include="Migrations\202202041034238_AddApplicationTable.designer.cs">
+      <DependentUpon>202202041034238_AddApplicationTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202041047503_ConfirmChanges.cs" />
+    <Compile Include="Migrations\202202041047503_ConfirmChanges.designer.cs">
+      <DependentUpon>202202041047503_ConfirmChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202041053436_ChangeApplicationTableName.cs" />
+    <Compile Include="Migrations\202202041053436_ChangeApplicationTableName.designer.cs">
+      <DependentUpon>202202041053436_ChangeApplicationTableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202041127049_ConfirmChangesToApplyForJobTable.cs" />
+    <Compile Include="Migrations\202202041127049_ConfirmChangesToApplyForJobTable.designer.cs">
+      <DependentUpon>202202041127049_ConfirmChangesToApplyForJobTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202041141081_RemoveApplicationUsersFromDbSet.cs" />
+    <Compile Include="Migrations\202202041141081_RemoveApplicationUsersFromDbSet.designer.cs">
+      <DependentUpon>202202041141081_RemoveApplicationUsersFromDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202041251120_ConfirmChangesApplied.cs" />
+    <Compile Include="Migrations\202202041251120_ConfirmChangesApplied.designer.cs">
+      <DependentUpon>202202041251120_ConfirmChangesApplied.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplyForJob.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Job.cs" />
@@ -429,6 +454,8 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\GetJobsByUserId.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -470,6 +497,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201260831410_AddLazyLoading1.resx">
       <DependentUpon>202201260831410_AddLazyLoading1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041034238_AddApplicationTable.resx">
+      <DependentUpon>202202041034238_AddApplicationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041047503_ConfirmChanges.resx">
+      <DependentUpon>202202041047503_ConfirmChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041053436_ChangeApplicationTableName.resx">
+      <DependentUpon>202202041053436_ChangeApplicationTableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041127049_ConfirmChangesToApplyForJobTable.resx">
+      <DependentUpon>202202041127049_ConfirmChangesToApplyForJobTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041141081_RemoveApplicationUsersFromDbSet.resx">
+      <DependentUpon>202202041141081_RemoveApplicationUsersFromDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041251120_ConfirmChangesApplied.resx">
+      <DependentUpon>202202041251120_ConfirmChangesApplied.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

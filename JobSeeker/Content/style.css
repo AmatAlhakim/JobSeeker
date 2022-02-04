@@ -93,4 +93,14 @@ body {
     text-align: center
 }
 
+#title {
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
 
