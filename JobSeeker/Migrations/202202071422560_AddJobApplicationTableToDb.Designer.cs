@@ -7,13 +7,13 @@ namespace JobSeeker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddApplicationTable : IMigrationMetadata
+    public sealed partial class AddJobApplicationTableToDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddApplicationTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddJobApplicationTableToDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202041034238_AddApplicationTable"; }
+            get { return "202202071422560_AddJobApplicationTableToDb"; }
         }
         
         string IMigrationMetadata.Source

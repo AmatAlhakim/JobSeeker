@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ConfirmChanges : DbMigration
+    public partial class AddApplyForJobTable : DbMigration
     {
         public override void Up()
         {

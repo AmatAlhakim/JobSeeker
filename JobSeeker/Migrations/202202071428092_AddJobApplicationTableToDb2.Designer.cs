@@ -7,13 +7,13 @@ namespace JobSeeker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class ConfirmChangesToApplyForJobTable : IMigrationMetadata
+    public sealed partial class AddJobApplicationTableToDb2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ConfirmChangesToApplyForJobTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddJobApplicationTableToDb2));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202041127049_ConfirmChangesToApplyForJobTable"; }
+            get { return "202202071428092_AddJobApplicationTableToDb2"; }
         }
         
         string IMigrationMetadata.Source

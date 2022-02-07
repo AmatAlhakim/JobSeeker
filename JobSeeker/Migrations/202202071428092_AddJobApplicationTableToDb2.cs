@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class RemoveApplicationUsersFromDbSet : DbMigration
+    public partial class AddJobApplicationTableToDb2 : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.ApplyForJobs",
+                "dbo.JobApplications",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -27,11 +27,11 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.ApplyForJobs", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.ApplyForJobs", "JobId", "dbo.Jobs");
-            DropIndex("dbo.ApplyForJobs", new[] { "UserId" });
-            DropIndex("dbo.ApplyForJobs", new[] { "JobId" });
-            DropTable("dbo.ApplyForJobs");
+            DropForeignKey("dbo.JobApplications", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.JobApplications", "JobId", "dbo.Jobs");
+            DropIndex("dbo.JobApplications", new[] { "UserId" });
+            DropIndex("dbo.JobApplications", new[] { "JobId" });
+            DropTable("dbo.JobApplications");
         }
     }
 }

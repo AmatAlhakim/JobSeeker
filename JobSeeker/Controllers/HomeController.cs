@@ -53,19 +53,19 @@ namespace JobSeeker.Controllers
             {
                 var userId = User.Identity.GetUserId();
                 var jobId = (int)Session["id"];
-                
+
                 //check if the job id is for a valid job
-                var result = context.ApplyForJobs.Where(p => p.Id == jobId && p.UserId == userId).ToList();
-               
+                var result = context.JobApplications.Where(p => p.Id == jobId && p.UserId == userId).ToList();
+
                 if (result.Count == 0)
                 {
-                    var application = new ApplyForJob();
+                    var application = new JobApplication();
                     application.JobId = jobId;
                     application.UserId = userId;
                     application.Message = Message;
                     application.ApplicationDate = DateTime.Now;
 
-                    context.ApplyForJobs.Add(application);
+                    context.JobApplications.Add(application);
                     context.SaveChanges();
                     ViewBag.Result = "Application Was Sent Successfully";
                     return View();
@@ -87,9 +87,20 @@ namespace JobSeeker.Controllers
         [Authorize]
         public ActionResult GetJobsByUserId()
         {
-            var userId =  User.Identity.GetUserId();
-            var jobs = context.ApplyForJobs.Where(p => p.UserId == userId);
+            var userId = User.Identity.GetUserId();
+            var jobs = context.JobApplications.Where(p => p.UserId == userId);
             return View(jobs.ToList());
+        }
+
+        [Authorize]
+        public ActionResult ApplicationDetails(int id)
+        {
+            var job = context.JobApplications.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
         }
     }
 }

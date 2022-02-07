@@ -250,6 +250,8 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Id
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.Security.Cookies.dll
@@ -274,6 +276,8 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\EntityFramework.Sql
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\Microsoft.Owin.Security.xml
@@ -299,12 +303,10 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Mig
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateJobTable.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddLazyLoading.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddLazyLoading1.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddApplicationTable.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.ConfirmChanges.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.ChangeApplicationTableName.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.ConfirmChangesToApplyForJobTable.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.RemoveApplicationUsersFromDbSet.resources
-C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.ConfirmChangesApplied.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddApplyForJobTable.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddJobApplicationTableToDb.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddJobApplicationTableToDb1.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddJobApplicationTableToDb2.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.GenerateResource.cache
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.CopyComplete
