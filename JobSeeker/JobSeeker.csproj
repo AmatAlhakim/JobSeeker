@@ -455,6 +455,8 @@
     <Content Include="Views\Home\Apply.cshtml" />
     <Content Include="Views\Home\GetJobsByUserId.cshtml" />
     <Content Include="Views\Home\ApplicationDetails.cshtml" />
+    <Content Include="Views\Home\EditApplication.cshtml" />
+    <Content Include="Views\Home\CancelApplication.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

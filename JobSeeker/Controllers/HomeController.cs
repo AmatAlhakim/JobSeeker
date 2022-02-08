@@ -3,6 +3,8 @@ using System.Web.Mvc;
 using JobSeeker.Models;
 using Microsoft.AspNet.Identity;
 using System;
+using System.Net;
+using System.Data.Entity;
 
 namespace JobSeeker.Controllers
 {
@@ -101,6 +103,62 @@ namespace JobSeeker.Controllers
                 return HttpNotFound();
             }
             return View(job);
+        }
+
+        [Authorize]
+        public ActionResult EditApplication(int id)
+        {
+            var job = context.JobApplications.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditApplication(JobApplication job)
+        {
+            if (ModelState.IsValid)
+            {
+                job.ApplicationDate=DateTime.Now;
+                context.Entry(job).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("GetJobsByUserId");
+            }
+            return View(job);
+        }
+
+        public ActionResult CancelApplication(int id)
+        {
+            var job = context.JobApplications.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
+        }
+
+        // POST: Jobs/Delete/5
+        [HttpPost, ActionName("CancelApplication")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteApplication(int id)
+        {
+            var job = context.JobApplications.Find(id);
+            context.JobApplications.Remove(job);
+            context.SaveChanges();
+            return RedirectToAction("GetJobsByUserId");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                context.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

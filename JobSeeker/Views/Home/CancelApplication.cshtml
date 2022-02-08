@@ -1,0 +1,77 @@
+﻿@model JobSeeker.Models.JobApplication
+
+@{
+    ViewBag.Title = "CancelApplication";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Cancel Apply For @Model.job.JobTitle</h2>
+
+<h3>Are you sure you want to cancel this?</h3>
+<div>
+    <h4>@Model.job.JobTitle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job.JobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.JobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job.JobImage)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model => model.job.JobImage)"
+                 alt="Job Image"
+                 class="img-thumbnail"
+                 style="width:50px; height:50px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "GetJobsByUserId")
+        </div>
+    }
+</div>
