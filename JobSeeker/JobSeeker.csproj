@@ -182,6 +182,7 @@
     <Content Include="font\house-door-fill.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\logo.PNG" />
+    <Content Include="Images\searchIcon.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -255,12 +256,29 @@
     <Compile Include="Migrations\202202071428092_AddJobApplicationTableToDb2.designer.cs">
       <DependentUpon>202202071428092_AddJobApplicationTableToDb2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202081017343_AddUserIdToJobTable.cs" />
+    <Compile Include="Migrations\202202081017343_AddUserIdToJobTable.designer.cs">
+      <DependentUpon>202202081017343_AddUserIdToJobTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202081022544_UpdateRelationships.cs" />
+    <Compile Include="Migrations\202202081022544_UpdateRelationships.designer.cs">
+      <DependentUpon>202202081022544_UpdateRelationships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202081024282_EditJobModel.cs" />
+    <Compile Include="Migrations\202202081024282_EditJobModel.designer.cs">
+      <DependentUpon>202202081024282_EditJobModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202081026142_EditJobModel2.cs" />
+    <Compile Include="Migrations\202202081026142_EditJobModel2.designer.cs">
+      <DependentUpon>202202081026142_EditJobModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobApplication.cs" />
+    <Compile Include="Models\JobsViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -457,6 +475,8 @@
     <Content Include="Views\Home\ApplicationDetails.cshtml" />
     <Content Include="Views\Home\EditApplication.cshtml" />
     <Content Include="Views\Home\CancelApplication.cshtml" />
+    <Content Include="Views\Home\GetJobsByPublisher.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -510,6 +530,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202071428092_AddJobApplicationTableToDb2.resx">
       <DependentUpon>202202071428092_AddJobApplicationTableToDb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202081017343_AddUserIdToJobTable.resx">
+      <DependentUpon>202202081017343_AddUserIdToJobTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202081022544_UpdateRelationships.resx">
+      <DependentUpon>202202081022544_UpdateRelationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202081024282_EditJobModel.resx">
+      <DependentUpon>202202081024282_EditJobModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202081026142_EditJobModel2.resx">
+      <DependentUpon>202202081026142_EditJobModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

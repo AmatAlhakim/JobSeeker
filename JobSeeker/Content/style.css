@@ -102,5 +102,22 @@ body {
     padding-right: 3px;
 }
 
+#subHeader #searchBar {
+    width: 180px;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('../Images/searchIcon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 12px;
+    margin-top: -15px;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchBar:focus{
+    width:100%;
+}
+
 
 

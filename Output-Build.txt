@@ -1,6 +1,4 @@
-﻿Rebuild started...
-1>------ Rebuild All started: Project: JobSeeker.Resources, Configuration: Debug Any CPU ------
-1>  JobSeeker.Resources -> C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker.Resources\bin\Debug\JobSeeker.Resources.dll
-2>------ Rebuild All started: Project: JobSeeker, Configuration: Debug Any CPU ------
-2>  JobSeeker -> C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\JobSeeker.dll
-========== Rebuild All: 2 succeeded, 0 failed, 0 skipped ==========
+﻿Build started...
+1>------ Build started: Project: JobSeeker, Configuration: Debug Any CPU ------
+1>  JobSeeker -> C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\bin\JobSeeker.dll
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========

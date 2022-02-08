@@ -1,0 +1,23 @@
+﻿@model IEnumerable<JobSeeker.Models.Job>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="panel panel-default">
+    <h1 class="panel-heading" style="color:blue;">Search Result</h1>
+
+    <div class="row" style="padding-top: 30px;">
+        @foreach (var innerItem in Model)
+        {
+            <div class="col-md-3" style="margin-left:20px; margin-bottom: 20px; height:380px;">
+                <img src="~/Uploads/@innerItem.JobImage" alt="Job Image" style="width:120px; height:130px;padding-bottom:10px;" />
+                <h3 style="padding-bottom:5px;">@innerItem.JobTitle</h3>
+                <h6 style="padding-bottom:5px;">@innerItem.JobDescription</h6>
+                @Html.ActionLink("More Detail", "Details", new { id = innerItem.Id }, new { @class = "btn btn-secondary" })
+            </div>
+        }
+    </div>
+</div>
+

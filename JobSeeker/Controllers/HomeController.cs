@@ -6,6 +6,7 @@ using System;
 using System.Net;
 using System.Data.Entity;
 
+
 namespace JobSeeker.Controllers
 {
     public class HomeController : Controller
@@ -150,6 +151,46 @@ namespace JobSeeker.Controllers
             context.JobApplications.Remove(job);
             context.SaveChanges();
             return RedirectToAction("GetJobsByUserId");
+        }
+
+        [Authorize]
+        public ActionResult GetJobsByPublisher()
+        {
+            var UserID = User.Identity.GetUserId();
+            var jobs = from app in context.JobApplications
+                       join job in context.Jobs
+                       on app.JobId equals job.Id
+                       where job.UserID == UserID
+                       select app;
+            var grouped = from j in jobs
+                          group j by j.job.JobTitle
+                          into gr
+                          select new JobsViewModel
+                          {
+                              JobTitle = gr.Key,
+                              Items = gr
+                          };
+            
+            if (jobs == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            return View(grouped.ToList());
+        }
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Search(string searchName)
+        {
+            if (searchName == null || searchName == "")
+                return HttpNotFound();
+            var result = context.Jobs.Where(p => p.JobTitle.Contains(searchName)
+            || p.JobDescription.Contains(searchName)
+            || p.Category.CategoryName.Contains(searchName)
+            || p.Category.Description.Contains(searchName));
+            return View(result.ToList());
         }
 
         protected override void Dispose(bool disposing)

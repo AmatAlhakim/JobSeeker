@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using JobSeeker.Models;
+using System.Collections.Generic;
 
 namespace JobSeeker
 {
@@ -11,6 +12,7 @@ namespace JobSeeker
     public class ApplicationUser : IdentityUser
     {
         public string UserType { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

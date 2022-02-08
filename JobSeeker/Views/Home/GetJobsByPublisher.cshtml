@@ -1,0 +1,41 @@
+﻿@model IEnumerable<JobSeeker.Models.JobsViewModel>
+
+@{
+    ViewBag.Title = "GetJobsByPublisher";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Get Job Applications Details By Publisher </h2>
+
+<div class="fa-thumb-tack">
+    @foreach (var item in Model)
+    {
+        <div style="padding-top:50px;">
+            <h4>@item.JobTitle</h4>
+            <hr />
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>User Name </th>
+                    <th>Application Message</th>
+                    <th>Apply Date</th>
+                </tr>
+                @foreach (var subItem in item.Items)
+                {
+                    <tr>
+                        <td>
+                            @subItem.user.UserName
+                        </td>
+                        <td>
+                            @subItem.Message
+                        </td>
+                        <td>
+                            @subItem.ApplicationDate
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+</div>
+
+

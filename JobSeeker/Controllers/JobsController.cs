@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using JobSeeker;
 using JobSeeker.Models;
 using System.IO;
+using Microsoft.AspNet.Identity;
 
 namespace JobSeeker.Controllers
 {
@@ -60,6 +61,7 @@ namespace JobSeeker.Controllers
                 upload.SaveAs(path);
                 //Add image path to the db
                 job.JobImage = upload.FileName;
+                job.UserID = User.Identity.GetUserId();
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -99,6 +101,7 @@ namespace JobSeeker.Controllers
                 {
                     System.IO.File.Delete(oldPath);
                     string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                    job.UserID = User.Identity.GetUserId();
                     upload.SaveAs(path);
                     job.JobImage = upload.FileName;
                 }                
