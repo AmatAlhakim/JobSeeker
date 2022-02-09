@@ -12,6 +12,7 @@ namespace JobSeeker
     public class ApplicationUser : IdentityUser
     {
         public string UserType { get; set; }
+        public string UserImage { get; set; }
         public virtual ICollection<Job> Jobs { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -39,5 +40,6 @@ namespace JobSeeker
         public DbSet<Job> Jobs { get; set; }
         public DbSet<JobApplication> JobApplications { get; set; }
 
+        public DbSet<JobSeeker.Models.EditProfileViewModel> EditProfileViewModels { get; set; }
     }
 }

@@ -1,0 +1,126 @@
+﻿@model JobSeeker.Models.EditProfileViewModel
+
+@{
+    ViewBag.Title = "EditProfile";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>EditProfile</h2>
+
+@using (Html.BeginForm("EditProfile", "Account", FormMethod.Post, new { enctype = "multipart/data-form" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <h3>@ViewBag.Message</h3>
+            </div>
+        }
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.UserImage)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserImage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <img src="~/Uploads/@Html.DisplayFor(model => model.UserImage)"
+                     alt="Job Image"
+                     class="img-thumbnail"
+                     style="width:100px; height:100px;" />
+                <input type="file" name="upload" id="avatar" />
+                @Html.ValidationMessageFor(model => model.UserImage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CurrentPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CurrentPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CurrentPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NewPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnSave").click(function () {
+                if ($("#avatar").val() != "") {
+                    //IF the image extension is valid
+                    var fileName = document.getElementById("avatar").value;
+                    var imageExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
+                    var validExtensions = ['jpg', 'png', 'gif', 'bmp', 'jfif'];
+
+                    if ($.inArray(imageExtension, validExtensions) == -1) {
+                        $("#errorDiv").fadeIn();
+                        $("#errorMessage").removeData();
+                        $("#errorMessage").text("Please Ensure To Upload An Image File, Only Image Files Which Ends With .jpg/ .png/ .gif/ bmp Will Be Accepted");
+                        return false;
+                    }
+                    //if the file size is valid
+                    var fileSize = document.getElementById("avatar").files[0].size / 1024 / 1024;
+                    if (fileSize > 2) {
+                        $("#errorDiv").fadeIn();
+                        $("#errorMessage").removeData();
+                        $("#errorMessage").text("The Size Of The Image Is More Than The Allowed Size (5 Mb)");
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+}
+

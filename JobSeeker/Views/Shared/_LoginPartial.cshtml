@@ -10,58 +10,34 @@
         var currentUser = context.Users.Where(p => p.Id == UserId).SingleOrDefault();
         @Html.AntiForgeryToken()
 
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="bi bi-person-fill"></i>
-                    <strong>Hello: @currentUser.UserName</strong>
-                </a>
 
-                <ul class="dropdown-menu">
-                    <li>
-                        <div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <p class="text-center">
-                                        <span class="bi bi-person-fill"></span>
-                                    </p>
-                                </div>
-                                <div class="col-lg-8">
-                                    <p class="text-right">
-                                        <strong>@currentUser.UserName</strong>
-                                    </p>
-                                    @if (currentUser.UserType.Contains("Publisher"))
-                                    {
-                                        <a href="#" class="btn btn-success">Jobs You Published</a>
-                                    }
-                                    else if (currentUser.UserType.Contains("Seeker"))
-                                    {
-                                        <a href="#" class="btn btn-success">Jobs You Applied For</a>
-                                    }
-                                    <a href="#" class="btn bnt-primary btn-block">Edit Account </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown-divider"></li>
-                    <li>
-                        <div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <p>
-                                        <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-danger btn-block">Log off</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            @* <li>
-                    @Html.ActionLink(JobSeekerResources.Hello+" "+ User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Hi @User.Identity.GetUserName()
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        @User.Identity.GetUserName()
+                        <svg style="width:70px; height:100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </a>
                 </li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
-        </ul>
+                @if (currentUser.UserType.Contains("Publisher"))
+                {
+                    <li><a class="dropdown-item" href="/Home/GetJobsByPublisher">Published Jobs</a></li>
+                    <li><a class="dropdown-item" href="/Jobs/Create">Publish New Jobs</a></li>
+                    <li><a class="dropdown-item" href="/Jobs/Index">Edit Published Jobs</a></li>
+                }
+                else
+                {
+                    <li><a class="dropdown-item" href="/Home/GetJobsByUserId">Applied Jobs</a></li>
+                }
+                <li><a class="dropdown-item" href="/Account/EditProfile">Edit Account</a></li>
+                <li><a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
+        </div>
     }
 }
 else

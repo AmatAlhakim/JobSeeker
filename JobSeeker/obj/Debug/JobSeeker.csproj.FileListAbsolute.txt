@@ -311,6 +311,10 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Mig
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateRelationships.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.EditJobModel.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.EditJobModel2.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddEditProfileModel.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddUserImageColumnToEditProfileModel.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.NewPasswordColumnIsOptional.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.NewPasswordColumnIsRequired.resources
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.GenerateResource.cache
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.CopyComplete

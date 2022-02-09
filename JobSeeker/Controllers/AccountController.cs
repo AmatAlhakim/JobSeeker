@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using JobSeeker.Models;
+using System.IO;
+using System.Data.Entity;
 
 namespace JobSeeker.Controllers
 {
@@ -23,7 +25,7 @@ namespace JobSeeker.Controllers
             context = new ApplicationDbContext();
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -35,9 +37,9 @@ namespace JobSeeker.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -121,7 +123,7 @@ namespace JobSeeker.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -140,7 +142,7 @@ namespace JobSeeker.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.UserType = new SelectList(context.Roles.Where(p=>!p.Name.Contains("Admin")).ToList(), "Name", "Name");
+            ViewBag.UserType = new SelectList(context.Roles.Where(p => !p.Name.Contains("Admin")).ToList(), "Name", "Name");
             return View();
         }
 
@@ -153,12 +155,12 @@ namespace JobSeeker.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.UserType = new SelectList(context.Roles.Where(p=>!p.Name.Contains("Admin")).ToList(), "Name", "Name");
-                var user = new ApplicationUser { UserName = model.UserName , Email = model.Email, UserType = model.UserType };
+                ViewBag.UserType = new SelectList(context.Roles.Where(p => !p.Name.Contains("Admin")).ToList(), "Name", "Name");
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, UserType = model.UserType };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -173,6 +175,49 @@ namespace JobSeeker.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        public ActionResult EditProfile()
+        {
+            var userId = User.Identity.GetUserId();
+            var user = context.Users.Where(p => p.Id == userId).SingleOrDefault();
+            var profile = new EditProfileViewModel();
+            profile.UserName = user.UserName;
+            profile.Email = user.Email;
+            profile.UserType = user.UserType;
+            if (user.UserImage != null)
+                profile.UserImage = user.UserImage;
+            return View(profile);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult EditProfile(EditProfileViewModel profile, HttpPostedFileBase upload)
+        {
+            if (ModelState.IsValid)
+            {
+                var id = User.Identity.GetUserId();
+                var currentUser = context.Users.Where(p => p.Id == id).SingleOrDefault();
+                if (currentUser != null)
+                {
+                    if (!UserManager.CheckPassword(currentUser, profile.CurrentPassword))
+                    {
+                        ViewBag.Message = "The Current Password Is Incorrect";
+                    }
+                    else
+                    {
+                        var newPasswordHash = UserManager.PasswordHasher.HashPassword(profile.NewPassword);
+                        currentUser.UserName = profile.UserName;
+                        currentUser.Email = profile.Email;
+                        currentUser.UserType = profile.UserType;
+                        currentUser.PasswordHash = newPasswordHash;
+                        context.Entry(profile).State = EntityState.Modified;
+                        context.SaveChanges();
+                        ViewBag.Message = "Changes are saved successfully";
+                    }
+                }
+            }
+            return View(profile);
         }
 
         //

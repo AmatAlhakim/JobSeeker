@@ -272,6 +272,22 @@
     <Compile Include="Migrations\202202081026142_EditJobModel2.designer.cs">
       <DependentUpon>202202081026142_EditJobModel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202090952456_AddEditProfileModel.cs" />
+    <Compile Include="Migrations\202202090952456_AddEditProfileModel.designer.cs">
+      <DependentUpon>202202090952456_AddEditProfileModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202091026021_AddUserImageColumnToEditProfileModel.cs" />
+    <Compile Include="Migrations\202202091026021_AddUserImageColumnToEditProfileModel.designer.cs">
+      <DependentUpon>202202091026021_AddUserImageColumnToEditProfileModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202091052255_NewPasswordColumnIsOptional.cs" />
+    <Compile Include="Migrations\202202091052255_NewPasswordColumnIsOptional.designer.cs">
+      <DependentUpon>202202091052255_NewPasswordColumnIsOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202091124105_NewPasswordColumnIsRequired.cs" />
+    <Compile Include="Migrations\202202091124105_NewPasswordColumnIsRequired.designer.cs">
+      <DependentUpon>202202091124105_NewPasswordColumnIsRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -477,6 +493,7 @@
     <Content Include="Views\Home\CancelApplication.cshtml" />
     <Content Include="Views\Home\GetJobsByPublisher.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Account\EditProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -542,6 +559,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202081026142_EditJobModel2.resx">
       <DependentUpon>202202081026142_EditJobModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202090952456_AddEditProfileModel.resx">
+      <DependentUpon>202202090952456_AddEditProfileModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202091026021_AddUserImageColumnToEditProfileModel.resx">
+      <DependentUpon>202202091026021_AddUserImageColumnToEditProfileModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202091052255_NewPasswordColumnIsOptional.resx">
+      <DependentUpon>202202091052255_NewPasswordColumnIsOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202091124105_NewPasswordColumnIsRequired.resx">
+      <DependentUpon>202202091124105_NewPasswordColumnIsRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
