@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Net;
 using System.Data.Entity;
-
+using System.Net.Mail;
 
 namespace JobSeeker.Controllers
 {
@@ -36,8 +36,34 @@ namespace JobSeeker.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult Contact(ContactModel contact)
+        {
+            if (ModelState.IsValid)
+            {
+                var mail = new MailMessage();
+                var logingInfo = new NetworkCredential("lionardomartinz@gmail.com", "#P@ssw0rd12$");
+                mail.From = new MailAddress(contact.Email);
+                mail.To.Add(new MailAddress("lionardomartinz@gmail.com"));
+                mail.IsBodyHtml = true;
+                mail.Subject = contact.Subject;
+                string body = "Sender Name: " + contact.Name + "<br/>" +
+                              "Sender Email: " + contact.Name + "<br/>" +
+                              "Email Subject: <strong>" + contact.Name + "</strong><br/>" +
+                              "Message Content: <b>" + contact.Name + "</b><br/>" ;
+                mail.Body = body;
+                
+                
+                var smtpClient = new SmtpClient("smtp.gmail.com",587);
+                smtpClient.Port = 587;
+                smtpClient.EnableSsl = true;
+                smtpClient.Credentials = logingInfo;
+                smtpClient.Send(mail);
+                return RedirectToAction("Index");
+            }
             return View();
         }
 

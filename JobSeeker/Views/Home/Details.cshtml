@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.JobDescription)
+            @Html.Raw(HttpUtility.HtmlDecode(Html.DisplayFor(model=>model.JobDescription).ToString()))
         </dt>
 
         <dd>

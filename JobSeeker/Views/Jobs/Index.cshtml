@@ -39,7 +39,7 @@
             @Html.DisplayFor(modelItem => item.JobTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.JobDescription)
+            @Html.Raw(HttpUtility.HtmlDecode(Html.DisplayFor(modelItem => item.JobDescription).ToString()))
         </td>
         <td>
             <img src="~/Uploads/@Html.DisplayFor(modelItem => item.JobImage)"

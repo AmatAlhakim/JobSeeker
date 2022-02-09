@@ -179,14 +179,15 @@ namespace JobSeeker.Controllers
 
         public ActionResult EditProfile()
         {
+            ViewBag.UserType = new SelectList(context.Roles.Where(p => !p.Name.Contains("Admin")).ToList(), "Name", "Name");
             var userId = User.Identity.GetUserId();
             var user = context.Users.Where(p => p.Id == userId).SingleOrDefault();
             var profile = new EditProfileViewModel();
             profile.UserName = user.UserName;
             profile.Email = user.Email;
+            profile.Number = user.PhoneNumber;
             profile.UserType = user.UserType;
-            if (user.UserImage != null)
-                profile.UserImage = user.UserImage;
+            profile.UserImage = user.UserImage;
             return View(profile);
         }
 
@@ -196,31 +197,30 @@ namespace JobSeeker.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewBag.UserType = new SelectList(context.Roles.Where(p => !p.Name.Contains("Admin")).ToList(), "Name", "Name");
+
                 var id = User.Identity.GetUserId();
                 var currentUser = context.Users.Where(p => p.Id == id).SingleOrDefault();
-                if (currentUser != null)
+
+                string oldPath = Path.Combine(Server.MapPath("~/Uploads"), currentUser.Id + profile.UserImage);
+                if (upload.ContentLength > 0 && upload != null)
                 {
-                    if (!UserManager.CheckPassword(currentUser, profile.CurrentPassword))
-                    {
-                        ViewBag.Message = "The Current Password Is Incorrect";
-                    }
-                    else
-                    {
-                        var newPasswordHash = UserManager.PasswordHasher.HashPassword(profile.NewPassword);
-                        currentUser.UserName = profile.UserName;
-                        currentUser.Email = profile.Email;
-                        currentUser.UserType = profile.UserType;
-                        currentUser.PasswordHash = newPasswordHash;
-                        context.Entry(profile).State = EntityState.Modified;
-                        context.SaveChanges();
-                        ViewBag.Message = "Changes are saved successfully";
-                    }
+                    System.IO.File.Delete(oldPath);
+                    string path = Path.Combine(Server.MapPath("~/Uploads"), currentUser.Id + upload.FileName);
+                    upload.SaveAs(path);
+                    currentUser.UserImage = currentUser.Id + upload.FileName;
+                    currentUser.UserName = profile.UserName;
+                    currentUser.Email = profile.Email;
+                    currentUser.PhoneNumber = profile.Number;
+                    currentUser.UserType = profile.UserType;
                 }
+                context.Entry(currentUser).State = EntityState.Modified;
+                context.SaveChanges();
+                ViewBag.Message = "Changes are saved successfully";
             }
             return View(profile);
         }
 
-        //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)

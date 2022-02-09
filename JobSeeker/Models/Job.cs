@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace JobSeeker.Models
 {
@@ -12,6 +13,7 @@ namespace JobSeeker.Models
         public string JobTitle { get; set; }
         [Required]
         [DisplayName("Job Description")]
+        [AllowHtml]
         public string JobDescription { get; set; }
         [DisplayName("Job Image")]
         public string JobImage { get; set; }

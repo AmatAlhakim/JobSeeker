@@ -320,3 +320,7 @@ C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csp
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.csproj.CopyComplete
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.dll
 C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.pdb
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateEditProfileModel.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateEditProfileModelAddPhoneNo.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.UpdateJobDescription.resources
+C:\Users\Admin\Documents\My Projects\JobSeeker\JobSeeker\obj\Debug\JobSeeker.Migrations.AddContactModel.resources

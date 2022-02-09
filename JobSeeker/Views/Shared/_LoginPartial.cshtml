@@ -19,9 +19,16 @@
                 <li>
                     <a class="dropdown-item" href="#">
                         @User.Identity.GetUserName()
-                        <svg style="width:70px; height:100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
+                        @if (currentUser.UserImage != null)
+                        {
+                            <img src="~/Uploads/@currentUser.UserImage" style="width:50px; height:60px" alt="User Image" />
+                        }
+                        else
+                        {
+                            <svg style="width:70px; height:100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        }
                     </a>
                 </li>
                 @if (currentUser.UserType.Contains("Publisher"))
@@ -35,6 +42,7 @@
                     <li><a class="dropdown-item" href="/Home/GetJobsByUserId">Applied Jobs</a></li>
                 }
                 <li><a class="dropdown-item" href="/Account/EditProfile">Edit Account</a></li>
+                <li><a class="dropdown-item" href="/Manage/ChangePassword">Change Password</a></li>
                 <li><a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
         </div>
