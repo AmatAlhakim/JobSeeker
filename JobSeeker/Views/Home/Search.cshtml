@@ -6,16 +6,16 @@
 }
 
 <div class="panel panel-default">
-    <h1 class="panel-heading" style="color:blue;">Search Result</h1>
+    <h1 class="card-header bg-light" style="color: blue; margin-bottom: 40px; margin-top: 40px;">Search Result</h1>
 
-    <div class="row" style="padding-top: 30px;">
+    <div class="row" style="padding:10px;">
         @foreach (var innerItem in Model)
         {
-            <div class="col-md-3" style="margin-left:20px; margin-bottom: 20px; height:380px;">
-                <img src="~/Uploads/@innerItem.JobImage" alt="Job Image" style="width:120px; height:130px;padding-bottom:10px;" />
-                <h3 style="padding-bottom:5px;">@innerItem.JobTitle</h3>
-                <h6 style="padding-bottom:5px;">@innerItem.JobDescription</h6>
-                @Html.ActionLink("More Detail", "Details", new { id = innerItem.Id }, new { @class = "btn btn-secondary" })
+            <div id="cardPanel" class="card text-center text-white bg-secondary col-md-3" style="margin-left: 20px; margin-bottom: 20px; min-height: 380px; padding:10px;">
+                <img class="card-img-top" src="~/Uploads/@innerItem.JobImage" style="padding-bottom:10px;" alt="Job Image" />
+                <h3 class="card-title" style="padding-bottom:5px; color:darkblue; font-weight:bold">@innerItem.JobTitle</h3>
+                <h6 class="card-body" style="padding-bottom:5px;">@Html.Raw(HttpUtility.HtmlDecode(@innerItem.JobDescription.ToString()))</h6>
+                @Html.ActionLink("More Detail", "Details", new { id = innerItem.Id }, new { @class = "btn btn-primary" })
             </div>
         }
     </div>

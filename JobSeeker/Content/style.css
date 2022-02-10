@@ -119,5 +119,20 @@ body {
     width:100%;
 }
 
+@media(min-width: 992px) {
+    .col-md-3 {
+        width: 23%;
+    }
+}
+
+#cardPanel:hover{
+    width:300px;
+}
+
+#cardPanel {
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
 
 
